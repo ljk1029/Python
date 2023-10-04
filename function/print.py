@@ -122,6 +122,20 @@ def sys_test():
     else:
         print('Too many arguments!')
 
+import os
+def os_test():
+    print('name:',  os.name)
+    print('uname:', os.uname)
+    print('environ:',  os.environ)
+    print('environ:',  os.environ.get('PATH'))
+    #os.path.abspath('.')
+    # 在某个目录下创建一个新目录，首先把新目录的完整路径表示出来:
+    #os.path.join('/Users/michael', 'testdir')
+    # 然后创建一个目录:
+    #os.mkdir('/Users/michael/testdir')
+    # 删掉一个目录:
+    #os.rmdir('/Users/michael/testdir')
+
 
 # main
 if __name__ == '__main__':
@@ -138,4 +152,5 @@ if __name__ == '__main__':
     print(add_end_b())
     print(add_end_b())
     sys_test()
+    os_test()
     pass
