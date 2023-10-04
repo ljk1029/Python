@@ -136,6 +136,10 @@ def os_test():
     # 删掉一个目录:
     #os.rmdir('/Users/michael/testdir')
 
+from datetime import datetime
+def time_test():
+    now = datetime.now() # 获取当前 datetime
+    print(now)
 
 # main
 if __name__ == '__main__':
@@ -153,4 +157,5 @@ if __name__ == '__main__':
     print(add_end_b())
     sys_test()
     os_test()
+    time_test()
     pass
