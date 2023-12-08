@@ -25,8 +25,8 @@ class Student(object):
 
 
 # 继承
-# common_para变量共享， private_para私有
-# 但是common_para 被使用后独立
+# common_para 类变量共享， private_para 是私有的
+# 但是change后是对实例更改，common_para 被使用后独立
 class Animal(object):
     common_para = 1
     def __init__(self, name):
@@ -72,16 +72,19 @@ def class_test():
     animal.display()
     animal_.display()
 
+    # 所有值改变
     Animal.common_para = 3
     dog.display()
     animal.display()
     animal_.display()
 
+    # 只有animal值变
     print("change:", animal.change(2, 20))
     dog.display()
     animal.display()
     animal_.display()
 
+    # 只有animal值不变
     Animal.common_para = 4
     dog.display()
     animal.display()
