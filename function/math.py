@@ -1,6 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+# math
+def math_demo():
+    a = abs(-20)
+    print("adb:", a)
+    b = max(2, 3, 1, -5)
+    print("max:", b)
+
 #generator
 def generator_test():
     g = (x * x for x in range(10))
@@ -84,11 +91,12 @@ def now():
 
 #main
 if __name__ == '__main__':
-    generator_test()
-    try_test()
-    iter_test()
-    map_test()
-    reduce_test()
-    filter_test()
-    sorted_test()
+    math_demo()
+    #generator_test()
+    #try_test()
+    #iter_test()
+    #map_test()
+    #reduce_test()
+    #filter_test()
+    #sorted_test()
     now()

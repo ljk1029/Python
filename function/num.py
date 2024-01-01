@@ -1,16 +1,22 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+"""
+说明文档： 图像处理使用说明
 
-import sys
+作者： ljk
+日期： 2023/01/01
+
+用法：
+  python script.py [参数1] [参数2]
+
+示例：
+  python script.py value1 value2
+"""
 
 from PIL import Image
-
-def path_test():
-    sys.path.append('..')
-    print("path:", sys.path)
-    
-
+ 
+# 图像处理
 def pillow_test():
     im = Image.open('test.png')
     print(im.format, im.size, im.mode)  
@@ -22,5 +28,4 @@ def pillow_test():
 
 # main
 if __name__ == '__main__':
-    path_test()
     pillow_test()
